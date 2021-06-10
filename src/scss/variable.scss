@@ -38,3 +38,14 @@ $xLarge: 640px;
 .gray_color{
   color: $color_gray;
 }
+.no-padding_mobile{
+  @media (max-width: $small) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.padding-mobile{
+  @media (max-width: $small) {
+    padding:0 0 0 15px;
+  }
+}

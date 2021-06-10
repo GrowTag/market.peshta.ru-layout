@@ -10,3 +10,12 @@
 
 .gray_color {
   color: #939393; }
+
+@media (max-width: 640px) {
+  .no-padding_mobile {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+
+@media (max-width: 640px) {
+  .padding-mobile {
+    padding: 0 0 0 15px; } }
