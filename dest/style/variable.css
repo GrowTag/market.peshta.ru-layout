@@ -19,3 +19,29 @@
 @media (max-width: 640px) {
   .padding-mobile {
     padding: 0 0 0 15px; } }
+
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .checkbox input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer; }
+    .checkbox input:checked ~ span.checkbox__custom-input {
+      background: #FA3F3F url("../../images/checkbox.png") no-repeat center;
+      border: solid 2px #FA3F3F; }
+  .checkbox__custom-input {
+    width: 22px;
+    height: 22px;
+    border: solid 2px #DADADA;
+    border-radius: 3px; }
+  .checkbox__text {
+    font-size: 14px;
+    padding: 0 0 0 5px; }
