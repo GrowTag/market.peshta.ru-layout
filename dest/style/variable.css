@@ -1,0 +1,12 @@
+.fs18 {
+  font-size: 18px; }
+  .fs18 * {
+    font-size: 18px; }
+
+.fs28 {
+  font-size: 28px; }
+  .fs28 * {
+    font-size: 28px; }
+
+.gray_color {
+  color: #939393; }

@@ -1,0 +1,40 @@
+$button_red: #FA3F3F;
+$red: #FA3F3F;
+$color: #303030;
+$color_gray: #939393;
+$bg_gray: #FBFAFA;
+$red_opacity: #fa3f3f1f;
+$orange: #FCF1ED;
+
+
+@mixin button($width, $height,$radius) {
+  border: none;
+  border-radius: $radius;
+  background: $button_red;
+  height: $height;
+  width: $width;
+}
+@mixin center_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fs18{
+  font-size: 18px;
+  *{
+    font-size: 18px;
+  }
+}
+.fs28{
+  font-size: 28px;
+  *{
+    font-size: 28px;
+  }
+}
+$small: 640px;
+$medium: 960px;
+$large: 640px;
+$xLarge: 640px;
+.gray_color{
+  color: $color_gray;
+}
