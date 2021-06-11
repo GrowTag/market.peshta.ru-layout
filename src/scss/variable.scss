@@ -7,6 +7,10 @@ $red_opacity: #fa3f3f1f;
 $orange: #FCF1ED;
 $input_border: #DADADA;
 
+$small: 640px;
+$medium: 960px;
+$large: 1200px;
+$xLarge: 1600px;
 
 @mixin button($width, $height,$radius) {
   border: none;
@@ -32,10 +36,7 @@ $input_border: #DADADA;
     font-size: 28px;
   }
 }
-$small: 640px;
-$medium: 960px;
-$large: 1200px;
-$xLarge: 1600px;
+
 .gray_color{
   color: $color_gray;
 }
@@ -78,5 +79,14 @@ $xLarge: 1600px;
   &__text{
     font-size: 14px;
     padding:  0 0 0 5px;
+  }
+}
+
+.list{
+  div{
+    font-size: 14px;
+    &:first-of-type{
+      color: $color_gray;
+    }
   }
 }

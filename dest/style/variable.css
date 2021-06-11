@@ -45,3 +45,8 @@
   .checkbox__text {
     font-size: 14px;
     padding: 0 0 0 5px; }
+
+.list div {
+  font-size: 14px; }
+  .list div:first-of-type {
+    color: #939393; }
