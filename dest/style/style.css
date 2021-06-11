@@ -1031,3 +1031,11 @@ input[type='text'] {
 
 .product-card__actual-price {
   font-size: 32px; }
+
+.warning-price {
+  background: #FCF1ED;
+  text-align: center;
+  color: #FA3F3F;
+  padding: 15px; }
+  .warning-price svg {
+    padding: 15px 0; }

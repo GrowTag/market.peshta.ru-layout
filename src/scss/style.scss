@@ -921,4 +921,13 @@ input[type='text']{
     font-size: 32px;
   }
 }
+.warning-price{
+  background: $orange;
+  text-align: center;
+  color: $red;
+  padding: 15px;
+  svg{
+    padding: 15px 0;
+  }
+}
 
