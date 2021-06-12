@@ -272,10 +272,18 @@ footer {
 
 a {
   color: #303030;
-  text-decoration: none; }
+  text-decoration: none;
+  word-break: break-all; }
+  a svg {
+    margin-right: 10px; }
   a:hover {
     color: #FA3F3F;
     text-decoration: none; }
+    a:hover path {
+      fill: #FA3F3F; }
+    a:hover circle {
+      fill: #FA3F3F;
+      opacity: 0.1; }
 
 p {
   font-size: 18px;

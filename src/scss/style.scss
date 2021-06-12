@@ -17,9 +17,20 @@ footer{
 a{
   color: $color;
   text-decoration: none;
+  word-break: break-all;
+  svg{
+    margin-right: 10px;
+  }
   &:hover{
     color: $red;
     text-decoration: none;
+    path{
+      fill: #FA3F3F;
+    }
+    circle{
+      fill:#FA3F3F;
+      opacity: 0.1;
+    }
   }
 }
 p{
