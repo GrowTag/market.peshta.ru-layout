@@ -9,6 +9,9 @@
   .fs28 * {
     font-size: 28px; }
 
+.red_color {
+  color: #FA3F3F; }
+
 .gray_color {
   color: #939393; }
 
@@ -1047,3 +1050,7 @@ input[type='text'] {
   padding: 15px; }
   .warning-price svg {
     padding: 15px 0; }
+
+.credentials * {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif; }

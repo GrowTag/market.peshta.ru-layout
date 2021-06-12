@@ -53,9 +53,13 @@ if($('.js-select2').length !== 0){
     $('.js-select2').select2({
         placeholder: "Выберите город",
         maximumSelectionLength: 2,
-        language: "ru"
+        language: "ru",
     });
 }
+if($('.js-select-lk').length !== 0){
+    $('.js-select-lk').select2({
+        minimumResultsForSearch: -1
+    });}
 $('body').on('click','.js-calc',function (e){
     let total_attr = $(e.currentTarget).find('.js-calc-total')
     let size = total_attr.attr('data-number')
@@ -123,50 +127,56 @@ if($('.polzunok-5').length !== 0){
     });
 }
 
-$('.js-open-filter').on('click',function (){
-    $('#filter').toggleClass('uk-visible@m')
-    $(this).toggleClass('filter_closed')
-})
-$('.main-slider').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 1,
-    fade: true,
-    arrows: true,
-    nextArrow: '<span class="arrow-next"></span>',
-    prevArrow: '<span class="arrow-prev"></span>',
-    asNavFor: '.thumb-slider'
-});
+if($('.js-open-filter').length !== 0){
+    $('.js-open-filter').on('click',function (){
+        $('#filter').toggleClass('uk-visible@m')
+        $(this).toggleClass('filter_closed')
+    })
+}
 
-$('.thumb-slider').slick({
-    infinite: true,
-    slidesToShow: 5,
-    vertical: true,
-    slidesToScroll: 1,
-    arrows: false,
-    focusOnSelect: true,
-    asNavFor: '.main-slider',
-    responsive: [
-        {
-            breakpoint: 1200,
-            settings: {
-                vertical: false,
-                slidesToShow: 4
-            }
-        },
-        {
-            breakpoint: 960,
-            settings: {
-                vertical: false,
-                slidesToShow: 3
-            }
-        },
-        {
-            breakpoint: 640,
-            settings: {
+if($('.main-slider').length !== 0){
+    $('.main-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        fade: true,
+        arrows: true,
+        nextArrow: '<span class="arrow-next"></span>',
+        prevArrow: '<span class="arrow-prev"></span>',
+        asNavFor: '.thumb-slider'
+    });
 
+    $('.thumb-slider').slick({
+        infinite: true,
+        slidesToShow: 5,
+        vertical: true,
+        slidesToScroll: 1,
+        arrows: false,
+        focusOnSelect: true,
+        asNavFor: '.main-slider',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 960,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+
+                }
             }
-        }
-    ]
-});
+        ]
+    });
+}
+
