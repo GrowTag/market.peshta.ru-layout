@@ -9,6 +9,9 @@
   .fs28 * {
     font-size: 28px; }
 
+.red_color {
+  color: #FA3F3F; }
+
 .gray_color {
   color: #939393; }
 
@@ -272,10 +275,18 @@ footer {
 
 a {
   color: #303030;
-  text-decoration: none; }
+  text-decoration: none;
+  word-break: break-all; }
+  a svg {
+    margin-right: 10px; }
   a:hover {
     color: #FA3F3F;
     text-decoration: none; }
+    a:hover path {
+      fill: #FA3F3F; }
+    a:hover circle {
+      fill: #FA3F3F;
+      opacity: 0.1; }
 
 p {
   font-size: 18px;
@@ -1031,3 +1042,15 @@ input[type='text'] {
 
 .product-card__actual-price {
   font-size: 32px; }
+
+.warning-price {
+  background: #FCF1ED;
+  text-align: center;
+  color: #FA3F3F;
+  padding: 15px; }
+  .warning-price svg {
+    padding: 15px 0; }
+
+.credentials * {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif; }

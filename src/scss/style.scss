@@ -17,9 +17,20 @@ footer{
 a{
   color: $color;
   text-decoration: none;
+  word-break: break-all;
+  svg{
+    margin-right: 10px;
+  }
   &:hover{
     color: $red;
     text-decoration: none;
+    path{
+      fill: #FA3F3F;
+    }
+    circle{
+      fill:#FA3F3F;
+      opacity: 0.1;
+    }
   }
 }
 p{
@@ -921,4 +932,19 @@ input[type='text']{
     font-size: 32px;
   }
 }
+.warning-price{
+  background: $orange;
+  text-align: center;
+  color: $red;
+  padding: 15px;
+  svg{
+    padding: 15px 0;
+  }
+}
 
+.credentials{
+  *{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+  }
+}
