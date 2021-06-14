@@ -981,3 +981,24 @@ input[type='text']{
     text-align: left;
   }
 }
+.category{
+  position: relative;
+  span{
+    position: absolute;
+    bottom: 32px;
+    left: 75px;
+    z-index: 2;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    @media (min-width: $small) {
+      font-size: 18px;
+    }
+  }
+  img{
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
