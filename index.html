@@ -473,7 +473,144 @@
             <p>Наш менеджер свяжется с вами в ближайшее время для уточнения деталей заказа. Отследить статус заказа можно в личном кабинете в разделе «Мои заказы».</p>
         </div>
     </div>
+
+    <div id="entrance" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-text-center modal">
+            <button class="uk-button uk-button-default uk-modal-close modal__closed" type="button"></button>
+            <h2 class="uk-modal-title">Вход</h2>
+            <form action="">
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" placeholder="Телефон или e-mail">
+                </div>
+                <div class="uk-margin error">
+                    <div class="password-block">
+                        <input class="uk-input js-password" type="password" placeholder="Пароль">
+                        <span class="password password__show js-show-password"></span>
+                    </div>
+                    <div class="error-text">
+                        Неверный логин или пароль
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <img src="images/captcha.png" alt="">
+                </div>
+                <div class="uk-margin">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__custom-input"></span>
+                        <span class="checkbox__text">Запомнить меня</span>
+                    </label>
+                </div>
+                <div class="uk-margin" uk-grid>
+                    <div class="uk-width-1-2@s"><button class="red-button">Вход</button></div>
+                    <div class="uk-width-1-2@s"><button class="red-button red-button__orange-button">Регистрация</button></div>
+                </div>
+                <div>
+                    <a href="" class="uk-text-small">Забыли пароль?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="registration" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-text-center modal">
+            <button class="uk-button uk-button-default uk-modal-close modal__closed" type="button"></button>
+            <h2 class="uk-modal-title uk-text-left">Регистрация</h2>
+            <form action="">
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" placeholder="Ваше имя">
+                </div>
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" placeholder="Телефон">
+                </div>
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" placeholder="E-mail">
+                </div>
+                <div class="uk-text-left">
+                    <div class="uk-margin"><strong>Зарегистрироваться как</strong></div>
+                    <div>
+                        <div class="uk-margin">
+                            <label class="radio">
+                                <input type="radio" name="radio2" checked>Физическое лицо
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="radio">
+                                <input type="radio" name="radio2">Индивидуальный предприниматель
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="radio">
+                                <input type="radio" name="radio2">Юридическое лицо
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="radio">
+                                <input type="radio" name="radio2">Государственная организация
+                                <span></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-margin" uk-grid>
+                    <div class="uk-width-1-2@s"><button class="red-button">Вход</button></div>
+                    <div class="uk-width-1-2@s"><button class="red-button red-button__orange-button">Регистрация</button></div>
+                </div>
+                <div>
+                    <a href="" class="uk-text-small">Уже есть аккаунт</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="registration2" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-text-center modal">
+            <button class="uk-button uk-button-default uk-modal-close modal__closed" type="button"></button>
+            <h2 class="uk-modal-title uk-text-left">Регистрация</h2>
+            <form action="">
+                <div class="uk-margin">
+                    <div class="password-block">
+                        <input class="uk-input js-password" type="password" placeholder="Пароль">
+                        <span class="password password__show js-show-password"></span>
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <div class="password-block">
+                        <input class="uk-input js-password" type="password" placeholder="Пароль">
+                        <span class="password password__show js-show-password"></span>
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <img src="images/captcha.png" alt="">
+                </div>
+                <div class="uk-margin">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox__custom-input"></span>
+                        <span class="checkbox__text">Запомнить меня</span>
+                    </label>
+                </div>
+                <div class="uk-margin" uk-grid>
+                    <div class="uk-width-1-2@s"><button class="red-button">назад</button></div>
+                    <div class="uk-width-1-2@s"><button class="red-button red-button__orange-button">создать аккаунт</button></div>
+                </div>
+                <div>
+                    <a href="" class="uk-text-small">Уже есть аккаунт</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <button uk-toggle="target: #entrance" type="button">ВХОД</button>
+
     <button uk-toggle="target: #my-id" type="button">Спасибо</button>
+
+    <button uk-toggle="target: #registration" type="button">Регистрация</button>
+    <button uk-toggle="target: #registration2" type="button">Регистрация шаг 2</button>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="dest/scripts/uikit.js"></script>
     <script type="text/javascript" src="dist/select/dist/js/select2.js"></script>

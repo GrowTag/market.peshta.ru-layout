@@ -55,6 +55,44 @@
   .list div:first-of-type {
     color: #939393; }
 
+.radio {
+  position: relative;
+  cursor: pointer;
+  padding: 0 0 0 20px;
+  font-family: 'Roboto', sans-serif; }
+  .radio input {
+    opacity: 0;
+    margin: 0; }
+  .radio input:checked ~ span:before {
+    border: solid 1px #FA3F3F; }
+  .radio input:checked ~ span:after {
+    content: ''; }
+  .radio span {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .radio span:before {
+      width: 22px;
+      height: 22px;
+      border: solid 1px #DADADA;
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -5px;
+      border-radius: 100%; }
+    .radio span:after {
+      width: 10px;
+      height: 10px;
+      background: #FA3F3F;
+      display: block;
+      position: absolute;
+      left: 7px;
+      top: 2px;
+      border-radius: 100%; }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -313,6 +351,9 @@ input[type='text'] {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .red-button__orange-button {
+    background: #fa3f3f1f;
+    color: #FA3F3F; }
   .red-button:hover {
     color: #FA3F3F;
     border: solid 1px #FA3F3F;
@@ -1054,3 +1095,29 @@ input[type='text'] {
 .credentials * {
   font-size: 14px;
   font-family: 'Roboto', sans-serif; }
+
+.password {
+  width: 24px;
+  height: 24px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  background: url("../../images/icon-pas2.png"); }
+  .password__show {
+    background: url("../../images/icon-pas.png"); }
+
+.password-block {
+  position: relative; }
+  .password-block input {
+    padding: 0 50px 0 10px;
+    border-radius: 5px; }
+
+.error input {
+  border: solid 1px #FA3F3F; }
+
+.error-text {
+  color: #FA3F3F;
+  text-align: left; }

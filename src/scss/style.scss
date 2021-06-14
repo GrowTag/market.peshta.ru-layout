@@ -53,6 +53,10 @@ input[type='text']{
   cursor: pointer;
   border: solid 1px transparent;
   @include center_content;
+  &__orange-button{
+    background: $red_opacity;
+    color: $red;
+  }
   &:hover{
     color: $red;
     border: solid 1px $red;
@@ -64,9 +68,8 @@ input[type='text']{
   > svg{
     margin-right: 10px;
   }
+
 }
-
-
 .search{
   &__body{
     border: solid 2px $button_red;
@@ -946,5 +949,35 @@ input[type='text']{
   *{
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
+  }
+}
+
+.password{
+  width: 24px;
+  height: 24px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  background: url("../../images/icon-pas2.png");
+  &__show{background: url("../../images/icon-pas.png");}
+}
+.password-block{
+  position: relative;
+  input{
+    padding: 0 50px 0 10px;
+    border-radius: 5px;
+  }
+}
+.error{
+  input{
+    border: solid 1px $red;
+  }
+
+  &-text{
+    color: $red;
+    text-align: left;
   }
 }

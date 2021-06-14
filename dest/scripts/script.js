@@ -179,4 +179,13 @@ if($('.main-slider').length !== 0){
         ]
     });
 }
+$('.js-show-password').on('click',function (){
+    $(this).toggleClass('password__show');
+    let input = $('.js-password')
+    if(input.attr('type') === 'password'){
+        input.attr('type','text')
+    }else{
+        input.attr('type','password')
+    }
+})
 
