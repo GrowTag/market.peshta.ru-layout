@@ -358,6 +358,8 @@ input[type='text'] {
     color: #FA3F3F;
     border: solid 1px #FA3F3F;
     background: none; }
+    .red-button:hover svg path {
+      fill: #FA3F3F; }
   .red-button:active {
     background: #fa3f3f1f; }
   .red-button > svg {
@@ -370,12 +372,23 @@ input[type='text'] {
   overflow: hidden;
   height: 44px; }
 
+.search__text {
+  font-size: 16px;
+  padding: 0 15px 0;
+  font-family: 'Roboto', sans-serif; }
+
 .search__submit {
   border: none;
   border-radius: 0;
   background: #FA3F3F;
   height: auto;
-  width: 60px; }
+  width: 60px;
+  cursor: pointer; }
+  .search__submit:hover {
+    background: none;
+    border-left: solid 2px #FA3F3F; }
+    .search__submit:hover svg path {
+      fill: #FA3F3F; }
 
 .header .uk-navbar-container {
   background: none; }
@@ -1140,3 +1153,9 @@ input[type='text'] {
     z-index: 1;
     max-width: 100%;
     max-height: 100%; }
+
+.uk-nav .uk-active > a {
+  color: #FA3F3F; }
+
+.uk-slidenav {
+  display: none; }

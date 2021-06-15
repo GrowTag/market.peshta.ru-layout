@@ -61,6 +61,11 @@ input[type='text']{
     color: $red;
     border: solid 1px $red;
     background: none;
+    svg{
+      path{
+        fill: $red;
+      }
+    }
   }
   &:active{
     background: $red_opacity;
@@ -79,10 +84,22 @@ input[type='text']{
     height: 44px;
   }
   &__text{
-
+    font-size: 16px;
+    padding: 0 15px 0;
+    font-family: 'Roboto', sans-serif;
   }
   &__submit{
-    @include button(60px,auto,0)
+    @include button(60px,auto,0);
+    cursor: pointer;
+    &:hover{
+      background: none;
+      border-left: solid 2px $red;
+      svg{
+        path{
+          fill: $red;
+        }
+      }
+    }
   }
 }
 .header{
@@ -1001,4 +1018,15 @@ input[type='text']{
     max-width: 100%;
     max-height: 100%;
   }
+}
+.uk-nav{
+  .uk-active{
+    > a{
+      color: $red;
+
+    }
+  }
+}
+.uk-slidenav{
+  display: none;
 }
