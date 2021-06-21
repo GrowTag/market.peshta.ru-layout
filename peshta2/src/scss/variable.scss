@@ -1,0 +1,218 @@
+$button_red: #FA3F3F;
+$red: #FA3F3F;
+$colorDark: #303030;
+$color_gray: #939393;
+$bg_gray: #FBFAFA;
+$red_opacity: #fa3f3f1f;
+$orange: #FCF1ED;
+$input_border: #DADADA;
+$gray_dark: #F4F4F4;
+$green: #2ED972;
+
+$small: 640px;
+$medium: 960px;
+$large: 1200px;
+$xLarge1480: 1480px;
+$xLarge: 1600px;
+
+@mixin button($width, $height,$radius) {
+  border: none;
+  border-radius: $radius;
+  background: $button_red;
+  height: $height;
+  width: $width;
+}
+@mixin center_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin base_block($width, $height,$radius,$bg,$hover){
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background: $bg;
+  display: flex;
+  &:hover{
+    background: $hover;
+  }
+}
+a{
+  color: $colorDark;
+  &:hover{
+    color: $red;
+    text-decoration: none;
+  }
+  svg{
+    margin: 0 5px;
+  }
+}
+.color_fff{
+  color: #fff;
+}
+.color_red{
+  color: $red;
+}
+.red_bg{
+  background: $red;
+}
+.list_red > ::before {
+  color: $red !important;
+}
+.checkbox{
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    &:checked~span.checkbox__custom-input{
+      background: #0075FF url("../../images/checkbox.png") no-repeat center;
+      border: solid 2px #0075FF;
+    }
+  }
+  &__custom-input{
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    border: solid 2px $input_border;
+    border-radius: 3px;
+  }
+  &__text{
+    font-size: 14px;
+    padding:  0 0 0 5px;
+  }
+}
+
+
+.radio{
+  position: relative;
+  cursor: pointer;
+  padding: 0 0 0 20px;
+  font-family: 'Roboto', sans-serif;
+  input{
+    opacity: 0;
+    margin: 0;
+  }
+  input:checked ~ span{
+    &:before{
+      border: solid 1px $red;
+    }
+    &:after{
+      content: '';
+    }
+  }
+  span{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    &:before{
+      width: 22px;
+      height: 22px;
+      border: solid 1px #DADADA;
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -5px;
+      border-radius: 100%;
+    }
+    &:after{
+      width: 10px;
+      height: 10px;
+      background: #FA3F3F;
+      display: block;
+      position: absolute;
+      left: 7px;
+      top: 2px;
+      border-radius: 100%;
+    }
+  }
+}
+.red-button{
+  @include button(100%,48px,5px);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: solid 1px transparent;
+  @media (min-width: $small) {
+    font-size: 14px;
+  }
+  @include center_content;
+  &__orange-button{
+    background: $red_opacity;
+    color: $red;
+  }
+  &:hover{
+    color: $red;
+    border: solid 1px $red;
+    background: none;
+    svg{
+      path{
+        fill: $red;
+      }
+    }
+  }
+  &:active{
+    background: $red_opacity;
+  }
+  > svg{
+    margin-right: 10px;
+  }
+}
+.fs-12{
+  font-size: 12px;
+}
+.fs-14{
+  font-size: 14px;
+}
+.fs-14-mobile{
+  @media (max-width: $small) {
+    font-size: 14px;
+  }
+}
+.fs-18{
+  font-size: 18px;
+}
+.fs-22{
+  font-size: 18px;
+  @media (min-width: $small) {
+    font-size: 22px;
+  }
+}
+.border_overflow_hide{
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.border_gray{
+  border: solid 1px $input_border;
+}
+.border_red{
+  border: solid 1px $red;
+}
+.padding_mobile_left{
+  padding-left: 30px;
+  @media (min-width: $small) {
+    padding-left: 0;
+  }
+}
+@media (max-width: $small) {
+  h2{
+    font-size: 22px;
+  }
+}
+.height1{
+  height: 200px;
+}
