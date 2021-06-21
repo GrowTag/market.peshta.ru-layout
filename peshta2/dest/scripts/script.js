@@ -38,4 +38,6 @@ if($('.main-slider').length !== 0){
 }
 
 
+const filter = document.querySelector('.blur');
 
+const addFilters = () => filter.classList.toggle('multiple-filters');

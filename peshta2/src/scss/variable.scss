@@ -86,8 +86,9 @@ a{
     border-radius: 3px;
   }
   &__text{
-    font-size: 14px;
+    font-size: 12px;
     padding:  0 0 0 5px;
+    font-family: 'Roboto', sans-serif;
   }
 }
 
@@ -139,13 +140,14 @@ a{
   }
 }
 .red-button{
-  @include button(100%,48px,5px);
+  @include button(100%,46px,5px);
   color: #fff;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
   border: solid 1px transparent;
+  padding: 0 15px;
   @media (min-width: $small) {
     font-size: 14px;
   }
@@ -170,7 +172,11 @@ a{
   > svg{
     margin-right: 10px;
   }
+  &_small{
+    @include button(100%,34px,17px);
+  }
 }
+.red-button-small{}
 .fs-12{
   font-size: 12px;
 }
@@ -184,12 +190,21 @@ a{
 }
 .fs-18{
   font-size: 18px;
+  line-height: 28px;
 }
 .fs-22{
   font-size: 18px;
   @media (min-width: $small) {
     font-size: 22px;
   }
+}
+.fs-36{
+  @media (min-width: $small) {
+    font-size: 36px;
+  }
+}
+.roboto_font{
+  font-family: 'Roboto', sans-serif;
 }
 .border_overflow_hide{
   position: relative;
@@ -215,4 +230,12 @@ a{
 }
 .height1{
   height: 200px;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.width_500{
+  width: 100%;
+  max-width: 500px;
 }

@@ -13,6 +13,7 @@ body{
 
 .base-block{
   @include base_block(100%,100%,10px,rgba(255, 255, 255, 0.5),#fff);
+
 }
 .red-block-top{
   background: url("../../images/banner-red.png") no-repeat center;
@@ -185,7 +186,11 @@ nav{
   }
 }
 .blog-and-case{
-
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  display: flex;
 }
 .main-slider{
   margin: 0 -15px;
@@ -200,7 +205,8 @@ nav{
   }
   &__text{
     padding: 50px 40px 150px 40px;
-    background: url("../../images/bg-gradient.png") no-repeat;
+    background: url("../../images/bg-gradient.png") no-repeat center;
+    background-size: cover;
     line-height: 28px;
     font-size: 18px;
   }
@@ -333,6 +339,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    svg{
+      width: 8px;
+      polyline{
+        stroke-width: 3;
+      }
+    }
     &:hover{
       background: $red;
       color: #fff;
@@ -395,21 +407,31 @@ nav{
     position: relative;
     display: block;
     height: 100%;
+    overflow: hidden;
     @media(min-width: $small) {
       &:before{
-        background: #FA3F3F;
         color: #fff;
         padding: 15px;
-        width: 107%;
-        height: 120%;
-        left: -30px;
-        top: -30px;
+        width: calc(100% );
+        height: calc(100% );
+        left: 0;
+        top: 0;
         position: absolute;
         border-radius: 10px;
         z-index: 1;
+        content: '';
+        transition: 0.3s;
       }
       &:hover{
-        &:before{content: '';}
+        overflow: visible;
+        &:before{
+          background: #FA3F3F;
+          width: calc(100% + 60px);
+          height: calc(100% + 60px);
+          left: -45px;
+          top: -45px;
+
+        }
         *{
           z-index: 2;
           color: #fff;
@@ -422,11 +444,19 @@ nav{
 }
 .form{
   background: #fff;
-  padding: 15px 25px;
+  padding: 30px 25px;
   box-shadow: 0 0 10px #0003;
   border-radius: 10px;
-  margin: -20px 0;
+
   @media(min-width: $small) {
+    border-radius: 10px;
+    margin-top: -30px !important;
+    margin-bottom: -30px !important;
+  }
+  &_margin-bottom-0{
+    margin-bottom: 0 !important;
+  }
+  &_bottom-radius-0{
     border-radius: 10px 10px 0 0;
   }
   a{
@@ -436,6 +466,20 @@ nav{
     border: none;
     border-bottom: solid 1px $colorDark;
     padding: 0;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    &::-webkit-input-placeholder {
+      color: #737373;
+    }
+    &::-moz-placeholder {
+      color: #737373;
+    }
+    &:-ms-input-placeholder {
+      color: #737373;
+    }
+    &:-moz-placeholder {
+      color: #737373;
+    }
   }
 }
 .slider-gradient{
@@ -615,12 +659,18 @@ footer{
   @media (min-width: $small) {
     display: flex;
   }
+  &_no-line{
+    &:before{
+      display: none !important;
+    }
+  }
   &__left{
     width: 44px;
     min-width: 44px;
     position: absolute;
     left: 0;
     top: 0;
+    height: 100%;
 
     @media (min-width: $small) {
       width: 70px;
@@ -640,8 +690,9 @@ footer{
   }
   &__center{
     padding: 10px 15px 0 60px;
+    height: 100%;
     @media (min-width: $small) {
-      padding: 15px 15px 0 15px;
+      padding: 15px 15px 0 95px;
       width: calc(50% - 35px);
     }
   }
@@ -658,6 +709,7 @@ footer{
 
   &__right{
     background: $gray_dark;
+    height: 100%;
     position: relative;
     padding: 25px 20px 15px 75px;
     margin: 0 -15px;
@@ -747,3 +799,14 @@ footer{
 
 
 
+.blur {
+  animation: changeWidth 8s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.2); // Make sure this color has an opacity of less than 1
+  backdrop-filter: blur(8px); // This be the blur
+  height: 100vh;
+}
+
+// Multiple filters
+.multiple-filters {
+  backdrop-filter: blur(20px) saturate(120%) contrast(200%);
+}

@@ -42,8 +42,9 @@ a {
     border: solid 2px #DADADA;
     border-radius: 3px; }
   .checkbox__text {
-    font-size: 14px;
-    padding: 0 0 0 5px; }
+    font-size: 12px;
+    padding: 0 0 0 5px;
+    font-family: 'Roboto', sans-serif; }
 
 .radio {
   position: relative;
@@ -87,7 +88,7 @@ a {
   border: none;
   border-radius: 5px;
   background: #FA3F3F;
-  height: 48px;
+  height: 46px;
   width: 100%;
   color: #fff;
   font-size: 12px;
@@ -95,6 +96,7 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   border: solid 1px transparent;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -114,6 +116,12 @@ a {
     background: #fa3f3f1f; }
   .red-button > svg {
     margin-right: 10px; }
+  .red-button_small {
+    border: none;
+    border-radius: 17px;
+    background: #FA3F3F;
+    height: 34px;
+    width: 100%; }
 
 .fs-12 {
   font-size: 12px; }
@@ -126,13 +134,21 @@ a {
     font-size: 14px; } }
 
 .fs-18 {
-  font-size: 18px; }
+  font-size: 18px;
+  line-height: 28px; }
 
 .fs-22 {
   font-size: 18px; }
   @media (min-width: 640px) {
     .fs-22 {
       font-size: 22px; } }
+
+@media (min-width: 640px) {
+  .fs-36 {
+    font-size: 36px; } }
+
+.roboto_font {
+  font-family: 'Roboto', sans-serif; }
 
 .border_overflow_hide {
   position: relative;
@@ -157,3 +173,11 @@ a {
 
 .height1 {
   height: 200px; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; }
+
+.width_500 {
+  width: 100%;
+  max-width: 500px; }

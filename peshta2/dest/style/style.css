@@ -43,8 +43,9 @@ a {
     border: solid 2px #DADADA;
     border-radius: 3px; }
   .checkbox__text {
-    font-size: 14px;
-    padding: 0 0 0 5px; }
+    font-size: 12px;
+    padding: 0 0 0 5px;
+    font-family: 'Roboto', sans-serif; }
 
 .radio {
   position: relative;
@@ -88,7 +89,7 @@ a {
   border: none;
   border-radius: 5px;
   background: #FA3F3F;
-  height: 48px;
+  height: 46px;
   width: 100%;
   color: #fff;
   font-size: 12px;
@@ -96,6 +97,7 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   border: solid 1px transparent;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -115,6 +117,12 @@ a {
     background: #fa3f3f1f; }
   .red-button > svg {
     margin-right: 10px; }
+  .red-button_small {
+    border: none;
+    border-radius: 17px;
+    background: #FA3F3F;
+    height: 34px;
+    width: 100%; }
 
 .fs-12 {
   font-size: 12px; }
@@ -127,13 +135,21 @@ a {
     font-size: 14px; } }
 
 .fs-18 {
-  font-size: 18px; }
+  font-size: 18px;
+  line-height: 28px; }
 
 .fs-22 {
   font-size: 18px; }
   @media (min-width: 640px) {
     .fs-22 {
       font-size: 22px; } }
+
+@media (min-width: 640px) {
+  .fs-36 {
+    font-size: 36px; } }
+
+.roboto_font {
+  font-family: 'Roboto', sans-serif; }
 
 .border_overflow_hide {
   position: relative;
@@ -158,6 +174,14 @@ a {
 
 .height1 {
   height: 200px; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; }
+
+.width_500 {
+  width: 100%;
+  max-width: 500px; }
 
 /* Slider */
 .slick-slider {
@@ -524,6 +548,13 @@ nav a[aria-expanded=true]:after {
 .uk-navbar-nav > li:first-of-type > a {
   padding-left: 0; }
 
+.blog-and-case {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  display: flex; }
+
 .main-slider {
   margin: 0 -15px; }
   @media (min-width: 640px) {
@@ -534,7 +565,8 @@ nav a[aria-expanded=true]:after {
   position: relative; }
   .top-banner__text {
     padding: 50px 40px 150px 40px;
-    background: url("../../images/bg-gradient.png") no-repeat;
+    background: url("../../images/bg-gradient.png") no-repeat center;
+    background-size: cover;
     line-height: 28px;
     font-size: 18px; }
   .top-banner__detail {
@@ -638,6 +670,10 @@ nav a[aria-expanded=true]:after {
     display: flex;
     align-items: center;
     justify-content: center; }
+    .small-slider__button svg {
+      width: 8px; }
+      .small-slider__button svg polyline {
+        stroke-width: 3; }
     .small-slider__button:hover {
       background: #FA3F3F;
       color: #fff; }
@@ -686,41 +722,64 @@ nav a[aria-expanded=true]:after {
     border-radius: 10px;
     position: relative;
     display: block;
-    height: 100%; }
+    height: 100%;
+    overflow: hidden; }
     @media (min-width: 640px) {
       .tile-hover__body:before {
-        background: #FA3F3F;
         color: #fff;
         padding: 15px;
-        width: 107%;
-        height: 120%;
-        left: -30px;
-        top: -30px;
+        width: calc(100%);
+        height: calc(100%);
+        left: 0;
+        top: 0;
         position: absolute;
         border-radius: 10px;
-        z-index: 1; }
-      .tile-hover__body:hover:before {
-        content: ''; }
-      .tile-hover__body:hover * {
-        z-index: 2;
-        color: #fff;
-        position: relative; } }
+        z-index: 1;
+        content: '';
+        transition: 0.3s; }
+      .tile-hover__body:hover {
+        overflow: visible; }
+        .tile-hover__body:hover:before {
+          background: #FA3F3F;
+          width: calc(100% + 60px);
+          height: calc(100% + 60px);
+          left: -45px;
+          top: -45px; }
+        .tile-hover__body:hover * {
+          z-index: 2;
+          color: #fff;
+          position: relative; } }
 
 .form {
   background: #fff;
-  padding: 15px 25px;
+  padding: 30px 25px;
   box-shadow: 0 0 10px #0003;
-  border-radius: 10px;
-  margin: -20px 0; }
+  border-radius: 10px; }
   @media (min-width: 640px) {
     .form {
-      border-radius: 10px 10px 0 0; } }
+      border-radius: 10px;
+      margin-top: -30px !important;
+      margin-bottom: -30px !important; } }
+  .form_margin-bottom-0 {
+    margin-bottom: 0 !important; }
+  .form_bottom-radius-0 {
+    border-radius: 10px 10px 0 0; }
   .form a {
     color: #FA3F3F; }
   .form input[type='text'] {
     border: none;
     border-bottom: solid 1px #303030;
-    padding: 0; }
+    padding: 0;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif; }
+    .form input[type='text']::-webkit-input-placeholder {
+      color: #737373; }
+    .form input[type='text']::-moz-placeholder {
+      color: #737373; }
+    .form input[type='text']:-ms-input-placeholder {
+      color: #737373; }
+    .form input[type='text']:-moz-placeholder {
+      color: #737373; }
 
 .slider-gradient {
   position: relative;
@@ -893,12 +952,15 @@ footer {
   @media (min-width: 640px) {
     .execution-stages {
       display: flex; } }
+  .execution-stages_no-line:before {
+    display: none !important; }
   .execution-stages__left {
     width: 44px;
     min-width: 44px;
     position: absolute;
     left: 0;
-    top: 0; }
+    top: 0;
+    height: 100%; }
     @media (min-width: 640px) {
       .execution-stages__left {
         width: 70px;
@@ -914,10 +976,11 @@ footer {
         .execution-stages__left:before {
           content: ''; } }
   .execution-stages__center {
-    padding: 10px 15px 0 60px; }
+    padding: 10px 15px 0 60px;
+    height: 100%; }
     @media (min-width: 640px) {
       .execution-stages__center {
-        padding: 15px 15px 0 15px;
+        padding: 15px 15px 0 95px;
         width: calc(50% - 35px); } }
   .execution-stages__head {
     color: #FA3F3F;
@@ -929,6 +992,7 @@ footer {
     line-height: 26px; }
   .execution-stages__right {
     background: #F4F4F4;
+    height: 100%;
     position: relative;
     padding: 25px 20px 15px 75px;
     margin: 0 -15px; }
@@ -997,3 +1061,12 @@ footer {
       transform: rotate(45deg); }
     .popup .uk-modal-close:before {
       transform: rotate(-45deg); }
+
+.blur {
+  animation: changeWidth 8s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  height: 100vh; }
+
+.multiple-filters {
+  backdrop-filter: blur(20px) saturate(120%) contrast(200%); }
