@@ -96,6 +96,7 @@ body{
     font-size: 18px;
     color: #fff;
     line-height: 24px;
+    font-weight: 700;
     @media(min-width: $small) {
       font-size: 32px;
       color: #fff;
@@ -471,12 +472,13 @@ nav{
 }
 .form{
   background: #fff;
-  padding: 30px 25px;
+  padding: 30px 20px;
   box-shadow: 0 0 10px #0003;
   border-radius: 10px;
 
   @media(min-width: $small) {
     border-radius: 10px;
+    padding: 30px 40px;
     margin-top: -30px !important;
     margin-bottom: -30px !important;
   }
@@ -760,10 +762,12 @@ footer{
     padding: 25px 20px 15px 75px;
     margin: 0 -15px;
     font-weight: 500;
+
+
     @media (min-width: $small) {
       width: calc(50% - 35px);
       border-radius: 10px;
-      margin: 0;
+      margin: 20px 0 0;
     }
     &:before{
       background:$green url("../../images/checkbox.png") no-repeat center;

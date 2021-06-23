@@ -234,6 +234,10 @@ h3, .uk-h3 {
     padding-left: 0 !important;
     padding-right: 0 !important; } }
 
+@media (min-width: 640px) {
+  .padding_right_10p {
+    padding-right: 10%; } }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -535,7 +539,8 @@ body {
   .red-block-form__text {
     font-size: 18px;
     color: #fff;
-    line-height: 24px; }
+    line-height: 24px;
+    font-weight: 700; }
     @media (min-width: 640px) {
       .red-block-form__text {
         font-size: 32px;
@@ -824,12 +829,13 @@ nav a[aria-expanded=true] {
 
 .form {
   background: #fff;
-  padding: 30px 25px;
+  padding: 30px 20px;
   box-shadow: 0 0 10px #0003;
   border-radius: 10px; }
   @media (min-width: 640px) {
     .form {
       border-radius: 10px;
+      padding: 30px 40px;
       margin-top: -30px !important;
       margin-bottom: -30px !important; } }
   .form_margin-bottom-0 {
@@ -1088,7 +1094,7 @@ footer {
       .execution-stages__right {
         width: calc(50% - 35px);
         border-radius: 10px;
-        margin: 0; } }
+        margin: 20px 0 0; } }
     .execution-stages__right:before {
       background: #2ED972 url("../../images/checkbox.png") no-repeat center;
       width: 24px;

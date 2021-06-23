@@ -232,3 +232,7 @@ h3, .uk-h3 {
   .padding_left_right_remove_mobile {
     padding-left: 0 !important;
     padding-right: 0 !important; } }
+
+@media (min-width: 640px) {
+  .padding_right_10p {
+    padding-right: 10%; } }

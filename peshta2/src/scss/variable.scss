@@ -299,3 +299,9 @@ h5,.uk-h5{}
 
   }
 }
+.padding_right_10p{
+  @media (min-width: $small) {
+    padding-right: 10%;
+
+  }
+}
