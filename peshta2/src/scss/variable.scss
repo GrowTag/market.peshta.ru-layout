@@ -8,6 +8,7 @@ $orange: #FCF1ED;
 $input_border: #DADADA;
 $gray_dark: #F4F4F4;
 $green: #2ED972;
+$color_gray2: #737373;
 
 $small: 640px;
 $medium: 960px;
@@ -50,20 +51,49 @@ a{
 .color_fff{
   color: #fff;
 }
+.color_dark{
+  color: $colorDark;
+}
 .color_red{
   color: $red;
+}
+.color_gray{
+  color: $color_gray2;
+}
+.flex_baseline{
+  align-items: baseline;
 }
 .red_bg{
   background: $red;
 }
-.list_red > ::before {
-  color: $red !important;
+.list_red{
+  font-weight: 500;
+  li{
+    font-family: 'Roboto', sans-serif;
+  }
+  > ::before {
+    color: $red !important;
+  }
+}
+.shadow_none{
+  box-shadow: none;
+}
+.bg_gray_dark{
+  background: $gray_dark;
+}
+.text_bold_800{
+  font-weight: 800;
+}
+p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 .checkbox{
   cursor: pointer;
   display: flex;
   align-items: flex-start;
   position: relative;
+  line-height: 16px;
   input{
     position: absolute;
     left: 0;
@@ -166,6 +196,7 @@ a{
       }
     }
   }
+
   &:active{
     background: $red_opacity;
   }
@@ -174,6 +205,12 @@ a{
   }
   &_small{
     @include button(100%,34px,17px);
+  }
+  &_short{
+    padding-right: 35px;
+    padding-left: 35px;
+    width: auto;
+    display: inline-flex;
   }
 }
 .red-button-small{}
@@ -238,4 +275,27 @@ h1,h2,h3,h4,h5{
 .width_500{
   width: 100%;
   max-width: 500px;
+}
+.grid_small_mobile{
+  @media (max-width: $small) {
+    margin-left: -15px;
+    > *{
+      padding-left: 15px;
+    }
+    > .uk-grid-margin,& + .uk-grid{
+      margin-top: 15px;
+    }
+  }
+}
+h1,.uk-h1{font-size: 2rem}
+h2,.uk-h2{}
+h3,.uk-h3{font-size: 18px;}
+h4,.uk-h4{}
+h5,.uk-h5{}
+.padding_left_right_remove_mobile{
+  @media (max-width: $small) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+  }
 }

@@ -9,20 +9,47 @@ a {
 .color_fff {
   color: #fff; }
 
+.color_dark {
+  color: #303030; }
+
 .color_red {
   color: #FA3F3F; }
+
+.color_gray {
+  color: #737373; }
+
+.flex_baseline {
+  align-items: baseline; }
 
 .red_bg {
   background: #FA3F3F; }
 
-.list_red > ::before {
-  color: #FA3F3F !important; }
+.list_red {
+  font-weight: 500; }
+  .list_red li {
+    font-family: 'Roboto', sans-serif; }
+  .list_red > ::before {
+    color: #FA3F3F !important; }
+
+.shadow_none {
+  box-shadow: none; }
+
+.bg_gray_dark {
+  background: #F4F4F4; }
+
+.text_bold_800 {
+  font-weight: 800; }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; }
 
 .checkbox {
   cursor: pointer;
   display: flex;
   align-items: flex-start;
-  position: relative; }
+  position: relative;
+  line-height: 16px; }
   .checkbox input {
     position: absolute;
     left: 0;
@@ -122,6 +149,11 @@ a {
     background: #FA3F3F;
     height: 34px;
     width: 100%; }
+  .red-button_short {
+    padding-right: 35px;
+    padding-left: 35px;
+    width: auto;
+    display: inline-flex; }
 
 .fs-12 {
   font-size: 12px; }
@@ -181,3 +213,22 @@ h1, h2, h3, h4, h5 {
 .width_500 {
   width: 100%;
   max-width: 500px; }
+
+@media (max-width: 640px) {
+  .grid_small_mobile {
+    margin-left: -15px; }
+    .grid_small_mobile > * {
+      padding-left: 15px; }
+    .grid_small_mobile > .uk-grid-margin, .grid_small_mobile + .uk-grid {
+      margin-top: 15px; } }
+
+h1, .uk-h1 {
+  font-size: 2rem; }
+
+h3, .uk-h3 {
+  font-size: 18px; }
+
+@media (max-width: 640px) {
+  .padding_left_right_remove_mobile {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
