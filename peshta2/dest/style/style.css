@@ -636,16 +636,39 @@ nav a[aria-expanded=true] {
   .main-slider {
     margin: 0; } }
 
+@media (min-width: 960px) {
+  .main-slider__slide {
+    display: flex; } }
+
 .top-banner {
   position: relative; }
+  @media (min-width: 960px) {
+    .top-banner__img {
+      width: 56%; } }
   .top-banner__img img {
     width: 100%; }
+  .top-banner__head {
+    font-size: 32px; }
+    @media (min-width: 640px) {
+      .top-banner__head {
+        font-size: 44px; } }
   .top-banner__text {
     background: url("../../images/bg-gradient.png") no-repeat center;
     background-size: cover;
     line-height: 28px;
     font-size: 18px;
-    padding: 50px 40px 150px 40px; }
+    padding: 30px 15px 130px 15px; }
+    @media (min-width: 960px) {
+      .top-banner__text {
+        padding: 61px 50px 150px 49px;
+        width: 44%; } }
+  .top-banner__text2 {
+    line-height: 22px;
+    font-size: 16px; }
+    @media (min-width: 640px) {
+      .top-banner__text2 {
+        font-size: 18px;
+        line-height: 28px; } }
   .top-banner__detail {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
