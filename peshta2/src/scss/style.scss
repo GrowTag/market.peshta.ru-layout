@@ -274,7 +274,7 @@ nav{
   }
   &__masonry{
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     left: 0;
     right: 0;
     margin: auto;
@@ -893,7 +893,7 @@ footer{
 
 .blur {
   animation: changeWidth 8s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.2); // Make sure this color has an opacity of less than 1
+  background: rgba(255, 255, 255, 0.4); // Make sure this color has an opacity of less than 1
   backdrop-filter: blur(8px); // This be the blur
   height: 100vh;
 }

@@ -677,7 +677,7 @@ nav a[aria-expanded=true] {
     color: #FA3F3F; }
   .top-banner__masonry {
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     left: 0;
     right: 0;
     margin: auto;
@@ -1194,7 +1194,7 @@ footer {
 
 .blur {
   animation: changeWidth 8s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(8px);
   height: 100vh; }
 
