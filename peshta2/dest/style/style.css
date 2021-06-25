@@ -176,6 +176,12 @@ p {
     .fs-22 {
       font-size: 22px; } }
 
+.fs-28 {
+  font-size: 18px; }
+  @media (min-width: 640px) {
+    .fs-28 {
+      font-size: 28px; } }
+
 @media (min-width: 640px) {
   .fs-36 {
     font-size: 36px; } }

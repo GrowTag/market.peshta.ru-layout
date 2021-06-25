@@ -235,6 +235,12 @@ p{
     font-size: 22px;
   }
 }
+.fs-28{
+  font-size: 18px;
+  @media (min-width: $small) {
+    font-size: 28px;
+  }
+}
 .fs-36{
   @media (min-width: $small) {
     font-size: 36px;
